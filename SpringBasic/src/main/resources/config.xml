@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--  new TestBean() : TestBean의 객체를 만들어라  -->
+    <!-- <bean class="kr.hs.study.beans.TestBean"/> -->
+    <!-- <bean class="kr.hs.study.beans.TestBean"/> -->
+
+    <!--  t1에 객체의 주소값이 들어감  -->
+    <bean id="t1" class="kr.hs.study.beans.TestBean"/>
+
+<!--  필요할 때마다 생성이 됨. scope="prototype"는 기본적으로 lazy-init="true"이 들어있음  -->
+    <bean id="t2" class="kr.hs.study.beans.TestBean" scope="prototype"/>
+
+    <!--  getBean할 때, 객체 생성됨 (내가 필요할 때)  -->
+    <bean id="t3" class="kr.hs.study.beans.TestBean" lazy-init="true"/>
+
+</beans>
