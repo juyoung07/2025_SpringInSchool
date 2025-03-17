@@ -4,4 +4,32 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	                    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="t1" class="kr.hs.study.beans.TestBean">
+        <constructor-arg value="yun"/>
+    </bean>
+
+    <bean id="t2" class="kr.hs.study.beans.TestBean">
+        <!--  똑같은 타입이 여러 개일 때 index 지정  -->
+        <constructor-arg value="5" type="int" index="0"/>
+        <constructor-arg value="5.5" type="double"/>
+        <constructor-arg value="lee" type="String"/>
+    </bean>
+
+    <!--  클래스 이름 없이 객체 생성  -->
+<!--    <bean id="t3" class="kr.hs.study.beans.TestBean2">-->
+<!--        <constructor-arg>-->
+<!--            <bean class="kr.hs.study.beans.DataBean"/>-->
+<!--        </constructor-arg>-->
+<!--        <constructor-arg>-->
+<!--            <bean class="kr.hs.study.beans.DataBean"/>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+    <!-- 객체 먼저 생성 후 주입  -->
+    <bean id="d1" class="kr.hs.study.beans.DataBean"/>
+    <bean id="t3" class="kr.hs.study.beans.TestBean2">
+        <constructor-arg ref="d1"/>
+        <constructor-arg ref="d1"/>
+    </bean>
+
 </beans>
