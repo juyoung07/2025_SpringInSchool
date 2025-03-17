@@ -5,7 +5,7 @@ import kr.hs.study.Animal;
 public class Cat implements Animal {
     private String color;
     private int leg;
-    private String name;
+    private Owner owner;
 
     @Override
     public void eat() {
@@ -20,12 +20,12 @@ public class Cat implements Animal {
     public void printCat() {
         System.out.println("color : " + color);
         System.out.println("leg : " + leg);
-        System.out.println("name : " + name);
+        owner.ownerPrint();
     }
 
-    public Cat(String color, int leg, String name) {
+    public Cat(String color, int leg, Owner owner) {
         this.color = color;
         this.leg = leg;
-        this.name = name;
+        this.owner = owner;
     }
 }
