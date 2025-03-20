@@ -20,6 +20,7 @@ public class Dog implements Animal {
     public void printDog() {
         System.out.println("color : " + color);
         System.out.println("leg : " + leg);
+        System.out.println("owner : " + owner);
         owner.ownerPrint();
     }
 

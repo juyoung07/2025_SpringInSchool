@@ -20,6 +20,7 @@ public class Cat implements Animal {
     public void printCat() {
         System.out.println("color : " + color);
         System.out.println("leg : " + leg);
+        System.out.println("owner : " + owner);
         owner.ownerPrint();
     }
 
