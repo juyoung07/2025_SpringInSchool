@@ -18,4 +18,13 @@
         <property name="data2" ref="databean2"/>
     </bean>
 
+    <bean id="t3" class="kr.hs.study.beans.TestBean2">
+        <property name="databean3">
+            <bean class="kr.hs.study.beans.DataBean2"/>
+        </property>
+        <property name="databean4">
+            <bean class="kr.hs.study.beans.DataBean2"/>
+        </property>
+    </bean>
+
 </beans>
